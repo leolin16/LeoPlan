@@ -1,0 +1,87 @@
+<header (window:load)="onLoad($event)">
+  <div class="logo"><a href="index.html"><img src="assets/images/bee-logo.png"></a></div>
+
+  <div><a class="nav-toggle" (click)='toggleMenu()'>Menu</a></div>
+  <!--<nav class="row main-nav nav-collapse clear-fix">
+    <ul>
+      <li><a routerLink="howto">How-to</a></li>
+      <li><a routerLink="examples">Show Project Details</a></li>
+    </ul>
+  </nav>-->
+      <app-nav class="main-nav nav-collapse clear-fix" [@showhideMenu]='menuState'>
+        <li *ngFor="let menu of menuItems;"><a routerLink="{{ menu[1] }}" (click)="closeMenu()">{{ menu[0] }}</a></li>
+      </app-nav>
+<!--
+      <leo-message class="layout--02">
+          <span slot-title>Your Account is Expiring!</span>
+          <span slot-message #messageContent>Your account will expire within the next thirty days. Please update your payment method in your account.</span>
+      </leo-message>
+
+      <leo-message class="layout--01">
+          <span slot-title>Your Account is Expiring!</span>
+      </leo-message>
+
+      <nav class="main-nav nav-collapse clear-fix" [@showhideMenu]='menuState'>
+        <ul> 
+          <li *ngFor="let menu of menuItems;"><a routerLink="{{ menu[1] }}" (click)="closeMenu()">{{ menu[0] }}</a></li>
+        </ul>
+      </nav>
+-->
+<!--  <video autoplay loop id="bg-video"webkit-playsinline playsinline >
+    <source src="assets/video/HE-Sergei Rachmaninov Sonata For Cello And Piano,OP19(Andante) 现场版--音悦Tai.mp4" type="video/mp4">
+    <source src="assets/video/Rachmaninov Sonata for Cello and Piano in g minor 3rd movement by Li-Wei Qin v2.mp4" type="video/mp4">
+    <source src="assets/video/bees.mp4" type="video/mp4">
+    <source src="assets/video/bees.webm" type="video/webm">
+    <source src="assets/video/bees.ogv" type="video/ogg">
+  </video>-->
+  <canvas id="sakura"></canvas>
+
+</header>
+<main class="clear" (window:resize)="onResize($event)">
+<!--<main class="clear">-->
+
+<!--
+  <div class="row">
+    <div class='panel' [@focusPanel]='state'>
+      <input type='text' placeholder='Add a project here.' (focus)='toggleFocus()' (blur)='toggleFocus()' (keyup.enter)='submitItem($event)' maxlength="25">
+      <p id="subtxt" [@note]='state'>Hit enter, max:25</p>
+    </div>
+  </div>
+-->
+
+  <div class="row">
+    <div class="small-12 medium-5">
+      <div class="panel nplr">
+        <div class="item-container" *ngFor="let item of ourItems; let i = index" [attr.data-index]="i" [@itemEnter]="state">
+          <div class="identifier {{ item[1] }}"></div>
+          <p><a class="paragraph" routerLink="iframepage/{{i}}" (click)="changeIdentifierColor($event, i)">{{ item[0] }}</a></p>
+          <a class="right sign" (click)="removeItem($event, i)">X</a>
+        </div>
+      </div>
+    </div>
+    <div class="small-12 medium-7 pages">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+  </div>
+</main>
+<footer class="global-footer">
+  <div class="row content-wrapper">
+    <section class="about">
+      <h2>About</h2>
+
+      <p>Powered by <a href="https://muses.live/ASPNET/" target="_blank">Leo Lin</a> with angular 2, ts & scss .</p>
+    </section>
+    <section class="credits">
+      <h2>Credits</h2>
+      <ul>
+        <li>Made by <a href="">Leo lin</a></li>
+      </ul>
+
+
+
+    </section>
+  </div>
+
+</footer>

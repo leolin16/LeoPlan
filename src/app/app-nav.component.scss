@@ -1,0 +1,172 @@
+@import '../styles.scss';
+@import './shared/scss/root/_colors.scss';
+
+$primary-color: rgba($g-root__color--1st,0.5);
+$secondary-color: rgba($g-root__color--2nd,0.5);
+$active-color: $g-root__color--3rd;
+$dark-color: $g-root__color--4th;
+$highlight-color: $g-root__color--5th;
+$hover-color: $g-root__color--6th;
+$visited-color: $g-root__color--2nd;
+$link-color: $g-root__color--7th;
+$border-bottom-color: $g-root__color--8th;
+
+:host(.main-nav) {
+    // @include BgColorSet();
+    background-color: rgba($g-root__color--7th,.3);
+    width: 100%;
+    // border-radius: 0.5em;
+    // display: block;
+    margin: 1.5em 0;
+    // padding: 0.1em 1.2em;
+    font-size: 1rem;
+}
+
+
+:host(.clear-fix) {
+  content: "";
+  display: table;
+  clear: both; 
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:host ul /deep/ li {
+    // // text-transform: uppercase;
+    // // font-weight: 300;
+    width: 40%;
+    text-align: center;
+    border-bottom: 1px solid $border-bottom-color;
+}
+
+:host ul /deep/ a {
+    display: block;  
+    padding: 10px 0;
+    color: $link-color;
+//    font-weight: 300;
+//    width: 100%;
+
+    border: 1px dashed rgba($link-color, 0.3);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  &:visited {
+     color: $visited-color;
+  }
+
+  &:hover {
+     color: $highlight-color;
+     transition: 1s all;
+    border: 1px solid $hover-color;
+  }
+  
+  &:active {
+     color: $active-color;
+  }
+
+}
+
+
+/deep/ .nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+//   font-family: "Roboto Condensed";
+//   font-weight: 100;  
+  padding: 1.2rem 1.2rem 1.2rem 2.5rem ;
+  position: relative;
+  right: 1rem;
+  text-transform: uppercase;
+  float: right;
+    color: #ebebeb;  
+  background-color: rgba($hover-color,.6);
+  margin: -8rem 0 0 0.7rem;
+}
+
+/* Pure CSS Hamburger Icon */
+/deep/ .nav-toggle:before {
+  content: "";
+  position: absolute;
+  top: 1.78rem;
+  left: .9rem;
+  width: 1.2rem;
+  height: 0.765rem;
+  border-top: 0.475rem double #dedede;
+  border-bottom: 0.125rem solid #dedede;
+}
+
+/deep/ .nav-toggle:hover {
+    background-color: rgba($hover-color,1);
+    box-shadow: 2px 1px 3px rgb(46, 46, 46);
+    color: $highlight-color;
+    transition: .5s all;
+}
+
+
+@media screen and (max-width: 800px){
+ 
+    :host ul /deep/ li {
+        width: 90%;
+    }
+
+    ul {
+        display: block;
+    }
+
+} /* close min-width: 980px */
+
+
+@media screen and (min-width: 800px) {
+  /deep/ .nav-toggle {
+    display: none;
+  }
+
+  :host ul /deep/ li {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 980px){
+ 
+//     .main-nav ul a:first-of-type {
+//       margin-left: 50px;
+//   }
+
+} /* close min-width: 980px */
+
+@media screen and (min-width: 1280px){
+  
+  
+  :host ul /deep/ a {
+    //  display: block;  
+     padding: 20px 0;
+    //  width: 100%;
+    //  margin-right: 13.2%;
+    //  float: left;
+  }
+
+} /* close min-width: 1280px */
+
+
+
+
+// :host ul /deep/ a {
+//     @include FtColorSet();
+//     // color: #fff;
+//     padding: 0 1em;
+//     text-decoration: none;
+// }
+
+// :host ul /deep/ a:hover {
+//     text-decoration: underline;
+// }

@@ -1,0 +1,242 @@
+@import 'themes';
+// Color Times
+// _________________________________________________________________________________________
+
+// black series
+$g-root__color-origins--black:  rgb(0,0,0); //also: greek black
+$g-root__color-origins--medieval-black:  rgb(14,6,3);
+$g-root__color-origins--charcoal-black:  rgb(23,25,25); //also: greek black
+
+// purple series
+$g-root__color-origins--tyrian-purple-3:  rgb(101,52,131);
+$g-root__color-origins--tyrian-purple:  rgb(130,49,142);
+$g-root__color-origins--tyrian-purple-2:  rgb(127,41,139);
+$g-root__color-origins--tyrian-purple-1:  rgb(129,41,139);
+
+
+// green series
+$g-root__color-origins--romanesque-green:  rgb(0,105,89);
+$g-root__color-origins--pompeian-green:  rgb(0,130,71);
+$g-root__color-origins--malachite-green:  rgb(0,149,96);
+$g-root__color-origins--green-earth:  rgb(41,158,97);
+$g-root__color-origins--luxor-green:  rgb(0,157,120);
+$g-root__color-origins--green-earth-1:  rgb(48,160,100);
+
+// blue series
+$g-root__color-origins--azurite-blue-1:  rgb(0,93,157);
+$g-root__color-origins--ultramarine:  rgb(0,101,171);
+$g-root__color-origins--crete-blue:  rgb(0,149,180);
+$g-root__color-origins--mediterranean-blue:  rgb(0,167,227);
+$g-root__color-origins--azurite-blue:  rgb(32,158,219);
+$g-root__color-origins--azurite-blue-2:  rgb(11,174,230);
+$g-root__color-origins--alexandria-blue:  rgb(0,164,199);
+$g-root__color-origins--roman-green:  rgb(0,177,184);
+
+
+$g-root__color-origins--raw-umber:  rgb(146,111,97);
+$g-root__color-origins--raw-umber-1:  rgb(138,100,95);
+$g-root__color-origins--nefertiti-tan:  rgb(183,102,75);
+
+// brown series
+$g-root__color-origins--russet-brown:  rgb(84,39,46);
+$g-root__color-origins--greek-brown:  rgb(98,53,38);
+$g-root__color-origins--nubian-brown:  rgb(181,68,33);
+$g-root__color-origins--copt-brown:  rgb(140,75,76);
+
+
+// red series
+$g-root__color-origins--cinnabar:  rgb(166,30,36);
+$g-root__color-origins--greek-red:  rgb(171,36,35);
+$g-root__color-origins--red-ochre-1:  rgb(175,36,35);
+$g-root__color-origins--red-ochre:  rgb(174,73,20);
+$g-root__color-origins--pompeian-red:  rgb(203,45,28);
+$g-root__color-origins--madder-red:  rgb(198,32,32);
+$g-root__color-origins--medieval-red:  rgb(215,7,57);
+$g-root__color-origins--kermes-red:  rgb(214,8,56);
+
+// pink series
+$g-root__color-origins--corinthian-rose:  rgb(226,115,138);
+
+// orange series
+$g-root__color-origins--crete-orange:  rgb(241,137,0);
+$g-root__color-origins--greek-orange:  rgb(222,124,18);
+
+// yellow/gold series
+$g-root__color-origins--byzantine-gold: rgb(207, 158, 46);
+$g-root__color-origins--egyptian-gold:  rgb(242,178,51);
+$g-root__color-origins--orpiment:  rgb(235,175,0);
+$g-root__color-origins--saffron-yellow:  rgb(245,187,0);
+$g-root__color-origins--yellow-ochre:  rgb(238,191,0);
+$g-root__color-origins--egyptian-yellow:  rgb(231,189,44);
+$g-root__color-origins--lead-tin-yellow:  rgb(255,218,14);
+
+// beige series
+$g-root__color-origins--medieval-beige: rgb(209, 173, 103);
+$g-root__color-origins--beige: rgb(217, 179, 137);
+
+// gray series
+$g-root__color-origins--medieval-gray:  rgb(127,123,123);
+$g-root__color-origins--charcoal-gray:  rgb(170,170,155);
+$g-root__color-origins--crete-gray: rgb(152,185,189);
+
+// white series
+$g-root__color-origins--marble-white:  rgb(242,226,206);
+$g-root__color-origins--cameo-white:  rgb(246,229,209);
+$g-root__color-origins--medieval-white:  rgb(255,254,236);
+$g-root__color-origins--white-lead:  rgb(255,255,255); //also: lime white
+
+// Color Themes
+// _________________________________________________________________________________________
+
+$colors: (
+    //01-black, 02-purple/deep-red. 03-green, 04-blue, 05-brown/red, 06-orange/yellow/gold  07-gray/pink/shallow yellow/gold, 08-white, 
+    // Pre-history
+    prehistory-1st: $g-root__color-origins--red-ochre,
+    prehistory-2nd: $g-root__color-origins--yellow-ochre,
+    prehistory-3rd: $g-root__color-origins--raw-umber,
+    prehistory-4th: $g-root__color-origins--cinnabar,
+    prehistory-5th: $g-root__color-origins--orpiment,
+    prehistory-6th: $g-root__color-origins--white-lead,
+    prehistory-7th: $g-root__color-origins--charcoal-gray,
+    prehistory-8th: $g-root__color-origins--charcoal-black,
+
+    // Ancient Egypt
+    ancientegypt-1st: $g-root__color-origins--egyptian-yellow,
+    ancientegypt-2nd: $g-root__color-origins--nefertiti-tan,
+    ancientegypt-3rd: $g-root__color-origins--nubian-brown,
+    ancientegypt-4th: $g-root__color-origins--alexandria-blue,
+    ancientegypt-5th: $g-root__color-origins--luxor-green,
+    ancientegypt-6th: $g-root__color-origins--white-lead,
+    ancientegypt-7th: $g-root__color-origins--charcoal-black,
+    ancientegypt-8th: $g-root__color-origins--egyptian-gold,
+
+    // Ancient Crete
+    ancientcrete-1st: $g-root__color-origins--crete-blue,
+    ancientcrete-2nd: $g-root__color-origins--crete-gray,
+    ancientcrete-3rd: $g-root__color-origins--red-ochre-1,
+    ancientcrete-4th: $g-root__color-origins--crete-orange,
+    ancientcrete-5th: $g-root__color-origins--raw-umber-1,
+    ancientcrete-6th: $g-root__color-origins--yellow-ochre,
+    ancientcrete-7th: $g-root__color-origins--green-earth,
+    ancientcrete-8th: $g-root__color-origins--white-lead,
+
+    // Ancient Greece
+    ancientgreece-1st: $g-root__color-origins--greek-red,
+    ancientgreece-2nd: $g-root__color-origins--greek-orange,
+    ancientgreece-3rd: $g-root__color-origins--greek-brown,
+    ancientgreece-4th: $g-root__color-origins--charcoal-black,
+    ancientgreece-5th: $g-root__color-origins--marble-white,
+    ancientgreece-6th: $g-root__color-origins--tyrian-purple,
+    ancientgreece-7th: $g-root__color-origins--corinthian-rose,
+    ancientgreece-8th: $g-root__color-origins--mediterranean-blue,
+
+    // Ancient Rome
+    ancientrome-1st: $g-root__color-origins--pompeian-red,
+    ancientrome-2nd: $g-root__color-origins--pompeian-green,
+    ancientrome-3rd: $g-root__color-origins--tyrian-purple-1,
+    ancientrome-4th: $g-root__color-origins--saffron-yellow,
+    ancientrome-5th: $g-root__color-origins--cameo-white,
+    ancientrome-6th: $g-root__color-origins--copt-brown,
+    ancientrome-7th: $g-root__color-origins--roman-green,
+    ancientrome-8th: $g-root__color-origins--azurite-blue,
+
+    // Byzantine
+    byzantine-1st: $g-root__color-origins--byzantine-gold,
+    byzantine-2nd: $g-root__color-origins--tyrian-purple-2,
+    byzantine-3rd: $g-root__color-origins--green-earth-1,
+    byzantine-4th: $g-root__color-origins--white-lead,
+    byzantine-5th: $g-root__color-origins--azurite-blue-1,
+    byzantine-6th: $g-root__color-origins--madder-red,
+    byzantine-7th: $g-root__color-origins--beige,
+    byzantine-8th: $g-root__color-origins--black,
+
+    // Romanesque
+    romanesque-1st: $g-root__color-origins--azurite-blue-1,
+    romanesque-2nd: $g-root__color-origins--russet-brown,
+    romanesque-3rd: $g-root__color-origins--medieval-beige,
+    romanesque-4th: $g-root__color-origins--medieval-red,
+    romanesque-5th: $g-root__color-origins--romanesque-green,
+    romanesque-6th: $g-root__color-origins--medieval-gray,
+    romanesque-7th: $g-root__color-origins--medieval-black,
+    romanesque-8th: $g-root__color-origins--medieval-white,
+
+    // Gothic
+    gothic-1st: $g-root__color-origins--ultramarine,
+    gothic-2nd: $g-root__color-origins--azurite-blue-2,
+    gothic-3rd: $g-root__color-origins--kermes-red,
+    gothic-4th: $g-root__color-origins--malachite-green,
+    gothic-5th: $g-root__color-origins--lead-tin-yellow,
+    gothic-6th: $g-root__color-origins--tyrian-purple-3,
+    gothic-7th: $g-root__color-origins--white-lead,
+    gothic-8th: $g-root__color-origins--charcoal-black,
+
+);
+
+// Final Colors Function
+// _________________________________________________________________________________________
+
+@mixin BgColorSet() {
+    background-color: map-get($colors, $g-root__theme#{"-1st"});
+
+    &:hover {
+        background-color: map-get($colors, $g-root__theme#{"-8th"});
+
+    }
+}
+
+@mixin FtColorSet() {
+
+    color: map-get($colors, $g-root__theme#{"-7th"});
+    &:hover {
+
+        color: map-get($colors, $g-root__theme#{"-2nd"});
+    }
+}
+    // $g-root__color-themes--01: g-root__color-themes-- + #{$g-root__theme} + -01;
+    
+$g-root__color--1st: map-get($colors, $g-root__theme#{"-1st"});
+$g-root__color--2nd: map-get($colors, $g-root__theme#{"-2nd"});
+$g-root__color--3rd: map-get($colors, $g-root__theme#{"-3rd"});
+$g-root__color--4th: map-get($colors, $g-root__theme#{"-4th"});
+$g-root__color--5th: map-get($colors, $g-root__theme#{"-5th"});
+$g-root__color--6th: map-get($colors, $g-root__theme#{"-6th"});
+$g-root__color--7th: map-get($colors, $g-root__theme#{"-7th"});
+$g-root__color--8th: map-get($colors, $g-root__theme#{"-8th"});
+
+
+// Color Series
+// _________________________________________________________________________________________
+
+// orange
+$g-root__color-series--orange-01-n:   #F15B2A;
+$g-root__color-series--orange-01-d:   #C43B0E;
+$g-root__color-series--orange-01-l:   #F69C7E;
+
+// blue
+$g-root__color-series--blue-01-n:   #2A9FBC;
+$g-root__color-series--blue-01-d:   #1F778D;
+$g-root__color-series--blue-01-l:   #76CBE0;
+
+// 03
+$g-root__color--primary--03a:   #404040;
+
+
+// red
+$g-root__color-series--red-01-n: #A62E5C;
+$g-root__color-series--red-01-d: #7D2345;
+$g-root__color-series--red-01-l: #D8739A;
+
+// green
+$g-root__color-series--green-01-n: #8BC850;
+$g-root__color-series--green-01-d: #77A032;
+$g-root__color-series--green-01-l: #C3DE96;
+
+// purple
+$g-root__color-series--purple-01-n: #675BA7;
+$g-root__color-series--purple-01-d: #4D447E;
+$g-root__color-series--purple-01-l: #A49DCA;
+
+// grey
+$g-root__color-series--grey-01-n: #303030;
+$g-root__color-series--grey-01-d: #171717;
+$g-root__color-series--grey-01-l: #E5E5E5;
